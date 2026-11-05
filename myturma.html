@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <h1 id="titulo">Este texto é para alterar com o js</h1>
+        <section>
+            <article>
+                <ul id="lista-filmes">
+                <!-- 
+                  <li>
+                    <span class="ranking">1</span>
+                    <span class="filme">Star wars</span>
+                    <span class="ano">1977</span>
+                  </li>  
+                -->
+                </ul>
+            </article>
+        </section>
+    </main>
+
+    <script>
+        //tarefa 1: Colocar o h1 o texto os meus filmes favoritos
+        //Passo 1: colocar o id no h1
+        //Passo 2: apanhar o elemento do html com o id título
+        const titulo = document.getElementById("titulo");
+        //passo 3: alterar o texto do h1
+        titulo.innerText = "Os meus filmes favoritos";
+        //tarefa 2: criar uma lista de filmes (array de JSON Objects)
+        const filmes = [
+            {'ranking': 1, 'nome': 'Shrek', 'ano': 2001},
+            {'ranking': 2, 'nome': 'Avatar', 'ano': 2009},
+            {'ranking': 3, 'nome': 'Pokemon', 'ano': 1999},
+            {'ranking': 4, 'nome': 'Spider-man', 'ano': 2002},
+        ];
+        //tarefa 3: Iterar o array de filmes e mandar apenas o nome para a console 
+         // com o comando console.log
+        //apanhar o elemento ul do html
+        const listarFilmes = document.getElementById("lista-filmes");
+       
+        //tarefa 4: mostrar na console o index do filme
+        filmes.forEach((filme, index) => {
+            console.log(index, filme.nome);
+            //tarefa 5: criar um elemento li e colocar
+            const novoli = document.createElement('li');
+            //tarefa 5.1:criar um elemento span para o ranking
+            //tarefa 5.2: criar um elemento span para o nome do filme
+            //tarefa 5.3: criar um elemento span para o ano do filme
+            //tarefa 5.4: colocar os spans dentro do li
+
+            //tarefa 5.5: colocar o li dentro do ul
+            listarFilmes.append(novoli)
+
+        });
+
+    </script>
+</body>
+</html>
